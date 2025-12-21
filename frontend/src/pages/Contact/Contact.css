@@ -1,0 +1,198 @@
+:root {
+    /* Define colors for easy use */
+    --color-background-dark: #1e1e1e; /* Deep Charcoal/Black */
+    --color-primary-text: #f5f5f5;    /* Off-White/Light Gray */
+    --color-accent-gold: #b8860b;      /* Dark Goldenrod for premium feel */
+    --color-input-bg: #2a2a2a;        /* Slightly lighter dark for inputs */
+    --color-border: #444;
+}
+
+/* Apply premium font and dark background to the whole page */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif; /* Use a classic serif font */
+    background-color: var(--color-background-dark);
+    color: var(--color-primary-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Classy headings */
+h1, h2 {
+    font-family: 'Cormorant Garamond', serif; /* Use a display serif font if imported */
+    font-weight: 300; /* Thin weight looks more exclusive */
+    letter-spacing: 2px;
+    color: var(--color-accent-gold);
+}
+.contact-page__container {
+    display: flex;
+    min-height: 100vh; /* Use most of the screen */
+    max-width: 1400px; /* Wider feels more grand */
+    margin: 5vh auto; /* Vertical centering with margin */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); /* Strong, sophisticated shadow */
+    background-color: var(--color-background-dark);
+}
+
+/* --- Image Section --- */
+.contact__image-section {
+    flex: 1.2; /* Give the image a bit more space for impact */
+    position: relative;
+    overflow: hidden;
+}
+
+.contact__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8; /* Slightly muted image for mood */
+}
+
+.contact__image-overlay {
+    /* Subtle vertical gradient to fade image edge into the form */
+    background: linear-gradient(to right, rgba(30, 30, 30, 0.4) 0%, rgba(30, 30, 30, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end; /* Position text at the bottom */
+    justify-content: flex-start;
+    padding: 40px;
+}
+
+.contact__image-title {
+    color: var(--color-primary-text);
+    font-size: 3em;
+    border-bottom: 1px solid var(--color-accent-gold);
+    padding-bottom: 10px;
+}
+
+/* --- Form Section --- */
+.contact__form-section {
+    flex: 1;
+    padding: 60px; /* More padding for spaciousness */
+    background-color: var(--color-background-dark);
+    border-left: 1px solid var(--color-border); /* Subtle separator */
+}
+
+.contact__form-title {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+.contact__form-subtitle {
+    color: #aaa;
+    margin-bottom: 40px;
+    font-style: italic;
+}
+.contact__form-group {
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.contact__label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--color-accent-gold);
+}
+
+.contact__input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-input-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 2px; /* Keep edges sharp, not rounded */
+    padding: 10px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus state: Subtle glow effect */
+.contact__input-wrapper:focus-within {
+    border-color: var(--color-accent-gold);
+    box-shadow: 0 0 5px rgba(184, 134, 11, 0.5);
+}
+
+.contact__icon-placeholder {
+    margin-right: 15px;
+    font-size: 1.1em;
+    color: #888;
+}
+
+.contact__input,
+.contact__textarea {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 5px 0;
+    font-size: 1em;
+    background-color: transparent;
+    color: var(--color-primary-text);
+    /* Make input text match the overall premium font */
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.contact__textarea {
+    resize: none; /* Often preferred for fixed, premium design */
+    line-height: 1.5;
+}
+
+/* --- Submit Button --- */
+.contact__submit-button {
+    padding: 15px 30px;
+    background-color: var(--color-accent-gold);
+    color: var(--color-background-dark); /* Dark text on gold button */
+    border: 1px solid var(--color-accent-gold);
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact__submit-button:hover {
+    background-color: #d4af37; /* Lighter gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(184, 134, 11, 0.4);
+}
+@media (max-width: 900px) {
+    .contact-page__container {
+        flex-direction: column;
+        margin: 0;
+        min-height: auto;
+        box-shadow: none;
+    }
+
+    .contact__image-section {
+        height: 300px; /* Fixed height for image on mobile */
+        flex: none;
+    }
+
+    .contact__image-overlay {
+        /* Remove the side-gradient and center the text */
+        background: rgba(0, 0, 0, 0.4);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .contact__form-section {
+        padding: 30px 20px;
+        border-left: none;
+    }
+    
+    .contact__form-title {
+        text-align: center;
+    }
+}
+.contact__icon {
+  font-size: 1.5rem;
+  color: #ff6347; /* change this to match your theme */
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
