@@ -17,6 +17,11 @@ Restaurant App is a comprehensive, user-friendly application designed to moderni
 - **Smooth Animations**: Enhanced user experience with GSAP and Tailwind Animate.
 - **Fast Navigation**: Instant page transitions using React Router.
 
+ ## screenshorts 
+ <img width="1279" height="540" alt="image" src="https://github.com/user-attachments/assets/cdb06620-fb45-4b92-9b55-862061679ac0" />
+ 
+
+
 ## 🛠️ Tech Stack
 
 The project leverages the latest web technologies to ensure performance and scalability.
@@ -63,6 +68,9 @@ Follow these steps to get the project running on your local machine.
 ## 🚀 Deployment
 
 The frontend includes a `vercel.json` configuration, making it ready for immediate deployment on Vercel.
+
+
+
 
 ## 🤝 Contributing
 
